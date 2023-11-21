@@ -1,0 +1,252 @@
+/* Add or update styles as needed */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #000000;
+  height: 50px;
+}
+
+.navbar__logo img {
+  height: 30px; /* Adjust the height as needed */
+}
+
+.navbar__links a {
+  color: #ebe8e8;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
+.navbar__sign-in button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+ margin-left: 1200px;
+  cursor: pointer;
+}
+.navbar__sign-up button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.sign-up-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fcf6f6;
+  padding: 42rem;
+  background-image: url(https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/60107fa5208b453f66790347_6002086f72b727fb1501e17c_freelance-websites.jpeg);
+  width: 500px;
+  border: 1px solid #f0e7e7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.sign-in-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fcf6f6;
+  padding: 42rem;
+  background-image: url(https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/60107fa5208b453f66790347_6002086f72b727fb1501e17c_freelance-websites.jpeg);
+  width: 500px;
+  border: 1px solid #f0e7e7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  
+}
+
+
+
+.sign-in-page label {
+  margin-bottom: 0.5rem;
+  padding-left: 70px;
+  padding-right: 30px;
+margin-left: 10px;
+
+}
+.sign-up-page label {
+  margin-bottom: 0.5rem;
+  padding-left: 70px;
+  padding-right: 30px;
+margin-left: 10px;
+ 
+}
+
+.sign-in-page input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+
+}
+.sign-up-page input {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  margin-left: 8px;
+ 
+}
+
+.sign-in-page button {
+  background-color: #0073ffc4;
+margin-left: 180px;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  padding-left: 40x;
+  padding-right: px;
+ 
+}
+.sign-up-page button {
+  background-color: #0073ffc4;
+  margin-left: 170px;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    padding-left: 40x;
+    padding-right: px;
+}
+.hello{
+  padding-left: 500px;
+}
+/* Footer.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__section {
+  flex: 1;
+}
+
+.footer__section h3 {
+  font-size: 1.2em;
+}
+
+.footer__copyright {
+  margin-top: 20px;
+}
+/* StylishSearchBar.css */
+
+.stylish-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+.sign-in-box {
+  background-color: rgb(29, 212, 188);
+  padding: 20px;
+padding-left: 40px;
+  background-image: url(https://t3.ftcdn.net/jpg/01/91/95/30/360_F_191953033_gehQATeDoh5z6PyRDbeKyBZuS83CjMEF.jpg);
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.sign-up-box {
+  background-color: rgb(29, 212, 188);
+  padding: 20px;
+   margin:31px;
+   width: 80px;
+   border-bottom: 1px solid;
+  background-image: url(https://t3.ftcdn.net/jpg/01/91/95/30/360_F_191953033_gehQATeDoh5z6PyRDbeKyBZuS83CjMEF.jpg);
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* SidebarLinks.css */
+
+.sidebar__links {
+  list-style: none;
+  padding: 3px;
+  
+ 
+ 
+}
+
+.sidebar__links li {
+  margin-bottom: px;
+background-color: #333;
+width: 150px;
+height: 100px;
+}
+
+.sidebar__links a {
+  color: #6abc00;
+  text-decoration: none;
+  font-size: 20px;
+  padding:40px;
+  font-style: oblique;
+ 
+  
+ 
+
+  
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.sidebar__links a:hover {
+  color: #00bcd4; /* Change the color to your preferred hover color */
+ 
+}
+.sidebar__close-button {
+  position: absolute;
+
+  left: 10px;
+  background: none;
+  border: none;
+  color: rgb(225, 232, 10);
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Style the menu button */
+.navbar__toggle-sidebar button {
+  color: #2196F3; /* Blue color */
+ 
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar__toggle-sidebar button:hover {
+  color: #1565c0; /* Darker blue on hover */
+ 
+}

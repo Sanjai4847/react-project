@@ -1,0 +1,225 @@
+// FreelancersList.jsx
+
+import React from 'react';
+
+
+const FreelancersList = () => {
+  // Sample data for 3 freelancers
+  const freelancers = [
+    {
+      id: 1,
+      name: 'John Doe',
+      jobTitle: 'Web Developer',
+      location: 'City, Country',
+      skills: ['React.js', 'JavaScript', 'HTML', 'CSS'],
+      profilePicture: 'https://qph.cf2.quoracdn.net/main-thumb-2317299440-200-jponyvcmrjhoivofojfnosddqhopkzmv.jpeg',
+    },
+    {
+      id: 2,
+      name: 'Jane Smith',
+      jobTitle: 'Graphic Designer',
+      location: 'Another City, Country',
+      skills: ['Adobe Photoshop', 'Illustrator', 'UI/UX Design'],
+      profilePicture: 'https://bs-uploads.toptal.io/blackfish-uploads/talent/profile/picture_file/picture/1072324/retina_160x160_huge_b43e1c95f5c6f51bda4fbd442f6e3f81-f30e270f4f9499e3ac5643514a1bfbf0.jpg',
+    },
+    {
+      id: 3,
+      name: 'Bob Johnson',
+      jobTitle: 'Mobile App Developer',
+      location: 'Yet Another City, Country',
+      skills: ['React Native', 'JavaScript', 'Firebase'],
+      profilePicture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROjpmq7QLh8REPwa5COPGkaJLZK1COZNBwGlGrkHRi23xIvp0R9uH2eU6CUKgp0mi7J2Q&usqp=CAU',
+    },
+    {
+      id: 2,
+      name: 'William',
+      jobTitle: 'Frontend Developer',
+      location: 'Another City, Another Country',
+     skills: ['Angular', 'JavaScript', 'HTML', 'CSS'],
+      profilePicture: 'https://bs-uploads.toptal.io/blackfish-uploads/talent/profile/picture_file/picture/1074509/regular_160x160_centered_huge_cadd958d963390c7a627a0505ffc309c-7ce30d560cf7b3138bb77478695ba69b.jpg',
+    },
+    
+    {
+      id: 3,
+      name: 'Alex Johnson',
+      jobTitle: 'Full Stack Developer',
+      location: 'Different City, Different Country',
+      skills: ['Node.js', 'React.js', 'MongoDB', 'Express.js'],
+      profilePicture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0sO_3R8bprZiHENEIGBE9tmvGsFEAz61T36BDYF3C0-magRxGe8vQ2L5HF_LrsxoUp7g&usqp=CAU',
+    },
+    
+    {
+      id: 4,
+      name: 'Emily Davis',
+      jobTitle: 'UI/UX Designer',
+      location: 'Yet Another City, Yet Another Country',
+      skills: ['Sketch', 'Adobe XD', 'Figma', 'CSS'],
+      profilePicture: 'https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/62ed485fc1157bf7fa8b16749ba0442e-1624387015237/7cff1585-2353-4eb6-b91d-010a8e1046a5.jpeg',
+    },
+    
+ {
+      id: 5,
+      name: 'Michael White',
+      jobTitle: 'Backend Developer',
+      location: 'Some City, Some Country',
+      skills: ['Java', 'Spring Boot', 'MySQL', 'RESTful APIs'],
+      profilePicture: 'https://images.squarespace-cdn.com/content/v1/55677e68e4b0f08b0b268c57/1556887883325-X22E6UL4ZT7H47F9QL49/Tom+Ross+Design+Cuts+Freelancer+Podcast.png?format=500w',
+    },
+     {
+      id: 1,
+      name: 'watson',
+      jobTitle: 'Software Engineer',
+      location: 'Town, Country',
+      skills: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+      profilePicture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwgw5VmjuPnM81MHgjmQsOpE49ljFa3PZMTEBg22KhDpHAmX9SL7xZZ5xAxlQabsbkOSg&usqp=CAU',
+    },
+    
+    {
+      id: 2,
+      name: 'vijay',
+      jobTitle: 'Full Stack Developer',
+      location: 'Village, Country',
+      skills: ['Node.js', 'JavaScript', 'MongoDB', 'Express'],
+      profilePicture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDOhHoYeoOVvFHV0qqRbljKgjCP9wx1dKUUCfW0YmSFaRCyOd3O7-bz5yjILGpzXuPs10&usqp=CAU',
+    },
+    
+    // Add more freelancer data as needed
+    // ...
+  ];
+  const handleHireClick = (freelancer) => {
+    // Implement your hire logic here
+    console.log(`Hiring freelancer with ID ${freelancer.Id}`);
+
+    const newWindow = window.open('', '_blank');
+    if (newWindow) {
+      newWindow.document.write(`
+        <html>
+          <head>
+            <title>Freelancer Details</title>
+            <!-- Add your CSS styles here if needed -->
+          </head>
+          <body>
+            <h1>${freelancer.name}</h1>
+            <p>Job Title: ${freelancer.jobTitle}</p>
+            <p>Location: ${freelancer.location}</p>
+            <h2>Skills</h2>
+            <ul>
+              ${freelancer.skills.map((skill) => `<li>${skill}</li>`).join('')}
+            </ul>
+            <!-- Add more details if needed -->
+          </body>
+        </html>
+      `);
+    } else {
+      alert('Please allow pop-ups to view freelancer details.');
+    }
+  
+  };
+
+  return (
+    <div style={styles.container}>
+      {freelancers.map((freelancer) => (
+        <div key={freelancer.id} style={styles.freelancerContainer}>
+          <div style={styles.profileSection}>
+            <img
+              src={freelancer.profilePicture}
+              alt={`Profile of ${freelancer.name}`}
+              style={styles.profilePicture}
+            />
+            <div style={styles.profileInfo}>
+              <h2 style={styles.name}>{freelancer.name}</h2>
+              <p style={styles.jobTitle}>{freelancer.jobTitle}</p>
+              <p style={styles.location}>Location: {freelancer.location}</p>
+               {/* Hire Button */}
+
+            
+            </div>
+          </div>
+          <div style={styles.skillsSection}>
+            <h3 style={styles.sectionTitle}>Skills</h3>
+            <ul style={styles.skillsList}>
+              {freelancer.skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+            <button onClick={() => handleHireClick(freelancer)} style={styles.hireButton}>
+                Hire
+              </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    maxWidth: '1200px',
+    margin: '0 auto',
+  },
+  freelancerContainer: {
+    flex: '0 0 300px',
+    margin: '20px',
+    padding: '20px',
+    background: '#fff',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    borderRadius: '8px',
+  },
+  profileSection: {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '20px',
+  },
+  profilePicture: {
+    width: '150px',
+    height: '150px',
+    borderRadius: '50%',
+    marginRight: '20px',
+  },
+  profileInfo: {
+    flex: '1',
+    textAlign: 'left',
+  },
+  name: {
+    margin: '0',
+    fontSize: '24px',
+  },
+  jobTitle: {
+    margin: '5px 0',
+    fontSize: '16px',
+    color: '#555',
+  },
+  location: {
+    margin: '5px 0',
+    fontSize: '16px',
+    color: '#555',
+  },
+  skillsSection: {
+    marginTop: '20px',
+  },
+  sectionTitle: {
+    fontSize: '20px',
+    margin: '0',
+  },
+  skillsList: {
+    listStyleType: 'none',
+    padding: '0',
+    margin: '0',
+  },
+ 
+  hireButton: {
+    marginTop: '10px',
+    padding: '10px',
+    background: 'blue', /* Green color */
+    color: 'white',
+    border: 'none',
+    borderRadius: '7px',
+    cursor: 'pointer',
+  },
+ 
+};
+
+export default FreelancersList;
